@@ -1,0 +1,101 @@
+#
+# Configuration for Bounties
+#
+
+# The prefix the plugin will use #
+Prefix: '&7[&cBountys&7]'
+
+# When a bounty is placed, should we broadcast it? #
+broadcastBounty: true
+
+# The message sent to players when they don’t have access #
+noPermission: '%prefix &cYou do not have permission to execute this command'
+
+# The message sent to people when there getting there current bounty #
+getBounty: '%prefix &7Your current bounty is: &a$%bounty'
+getSomeonesBounty: '%prefix &a%target &7currently has a bounty of: &a$%bounty'
+
+# The message sent when they have specified a incorrect integer #
+specifyInteger: '%prefix &cError: Please specify an amount to put on a player'
+
+# The message sent when a player specify’s a incorrect integer #
+notAInteger: '%prefix &cError: %args is either not a integer or is to low/high'
+
+# The message sent when the target player is not online #
+targetIsNotOnline: '%prefix &a%target &7is currently not online'
+
+# The message sent when /bounty remove is executed but the player is not found #
+targetNotFound: '%prefix &cError: That player is not found'
+
+# The message sent when they don’t have enough money to place a bounty #
+notEnoughMoney: '%prefix &cYou do not have enough money to place a bounty'
+
+# The message sent when a command is not recognised #
+incorrectArguments: '%prefix &cError: /bounty help for more information'
+
+# The messages sent/broadcasted when a bounty is placed on a player #
+addBountySender: '%prefix &7You have placed a bounty of &a$%bounty &7on &a%target'
+addBountyReceiver: '%prefix &7You have received a bounty of &a$%bounty &7by &a%target'
+addBroadcastBounty: '%prefix &7A bounty of &a$%bounty &7has been placed on &a%target'
+
+# The messages sent when a bounty is remove from a player #
+removeBountySender: '%prefix &7You have removed &a%target &7bounty'
+
+# The messages sent when a person with a bounty is killed #
+bountyMurderer: '%prefix &7You have killed &a%target &7and claimed there bounty'
+bountyVictim: '%prefix &a%target &7has killed you and claimed your bounty!'
+
+# This is the message sent in the inventory add bounty process #
+bountyTarget: '%prefix &7Who are you putting this bounty on?'
+
+# The message sent when a player specify’s a incorrect username #
+specifyPlayer: '%prefix &7Please specify a online player, only 1 word'
+
+# The message sent when a player is about to confirm there bounty
+confirmMessage: '%prefix &7Please type &aCONFIRM &7in the chat to confirm your bounty'
+
+# The message sent when a player is typing EXIT in the chat to stop a bounty #
+successfullyExited: '%prefix &7You have stopped placing a bounty'
+
+# The message sent when asking a player how much the bounty is #
+amountOfBounty: '%prefix &7How much would you like to put on this player?'
+
+# The message sent when they don’t type CONFIRM correctly at the confirm process #
+confirmBounty: '%prefix &7Please type &aCONFIRM &7or &aEXIT &7to stop the bounty'
+
+# Below is a full configuration for the bounty’s inventory #
+# Please do not make the size any higher then 54 or it will stuff with the menu #
+# If you are using eg. Clay blocks, the byte is the 159:13 <———, It is the 13 part #
+inventory:
+  name: '&c           &nBountys GUI'
+  size: 54
+
+  heads:
+    id: 397
+    data: 3
+    displayName: '&e%player'
+    withBounty:
+      lore: '&aCurrent Bounty: &c$%bounty'
+    withoutBounty:
+      lore: '&aI do not have a bounty'
+  
+  addBounty:
+    id: 133
+    displayName: '&c&lADD BOUNTY'
+    lore: '&aClick me to place a bounty'
+  
+  exit:
+    id: 152
+    displayName: '&c&lEXIT'
+    lore: '&aClick me to exit this menu'
+
+  pageArrows:
+    id: 262 
+    displayName: '&aGo to Page: &e%pageNumber'
+
+  currentBounty:
+    id: 358
+    displayName: '&aYour current bounty: &e$%bounty'
+
+  settings:
+    showNonBountyPlayers: true

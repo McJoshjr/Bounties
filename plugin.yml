@@ -1,0 +1,8 @@
+name: Bountys
+main: me.josh.bountys.Bountys
+version: 0.1
+author: MinecraftJoshjr
+depends: Vault
+commands:
+  bounty:
+    description: Bountys Root Command
